@@ -1,5 +1,5 @@
 /* eslint-disable prefer-const */
-import { Address, BigDecimal, BigInt } from "@graphprotocol/graph-ts";
+import { Address, BigDecimal, BigInt,ByteArray } from "@graphprotocol/graph-ts";
 import { Collection, NFT, AskOrder, Transaction, User } from "../generated/schema";
 import {
   AskCancel,
@@ -10,14 +10,14 @@ import {
   CollectionUpdate,
   RevenueClaim,
   Trade,
-} from "../generated/ERC721NFTMarketV1/ERC721NFTMarketV1";
+} from "../generated/TOOSWAPNFTMarketV1/TOOSWAPNFTMarketV1";
 import { toBigDecimal } from "./utils";
 import { updateCollectionDayData, updateMarketPlaceDayData } from "./utils/dayUpdates";
 import { fetchBunnyId, fetchName, fetchSymbol, fetchTokenURI } from "./utils/erc721";
 
 // Constants
 let ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
-let PANCAKE_BUNNIES_ADDRESS = "0xdf7952b35f24acf7fc0487d01c8d5690a60dba07";
+let PANCAKE_BUNNIES_ADDRESS = "0xC0f0E2057A1293087dE4faFE06C5D35B6bBa2E46";
 
 // BigNumber-like references
 let ZERO_BI = BigInt.fromI32(0);

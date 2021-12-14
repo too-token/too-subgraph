@@ -1,7 +1,7 @@
 /* eslint-disable prefer-const */
 import { Address, BigInt } from "@graphprotocol/graph-ts";
-import { IERC721 } from "../../generated/ERC721NFTMarketV1/IERC721";
-import { PancakeBunnies } from "../../generated/ERC721NFTMarketV1/PancakeBunnies";
+import { IERC721 } from "../../generated/TOOSWAPNFTMarketV1/IERC721";
+import { TOOKITV2 } from "../../generated/TOOSWAPNFTMarketV1/TOOKITV2";
 
 export function fetchName(collectionAddress: Address): string {
   let contract = IERC721.bind(collectionAddress);
@@ -37,7 +37,7 @@ export function fetchTokenURI(collectionAddress: Address, tokenId: BigInt): stri
 }
 
 export function fetchBunnyId(collectionAddress: Address, tokenId: BigInt): BigInt | null {
-  let contract = PancakeBunnies.bind(collectionAddress);
+  let contract = TOOKITV2.bind(collectionAddress);
 
   let bunnyIdResult = contract.try_getBunnyId(tokenId);
   if (!bunnyIdResult.reverted) {
